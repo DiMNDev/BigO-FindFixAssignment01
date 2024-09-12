@@ -82,21 +82,7 @@ class Program
     static List<int> SortNumbers(List<int> numbers)
     {
         List<int> sorted = new List<int>(numbers);
-        bool swapped;
-        do
-        {
-            swapped = false;
-            for (int i = 0; i < sorted.Count - 1; i++)
-            {
-                if (sorted[i] > sorted[i + 1])
-                {
-                    int temp = sorted[i];
-                    sorted[i] = sorted[i + 1];
-                    sorted[i + 1] = temp;
-                    swapped = true;
-                }
-            }
-        } while (swapped);
+        sorted.Sort();
 
         return sorted;
     }
